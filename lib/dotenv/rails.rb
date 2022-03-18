@@ -73,5 +73,9 @@ module Dotenv
     end
 
     config.before_configuration { load }
+    
+    rake_tasks do
+      load Pathname.new(__dir__).join("tasks.rb")
+    end
   end
 end
